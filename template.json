@@ -1,0 +1,67 @@
+{
+	"Actor": {
+		"types": ["ModularFate", "Thing"],
+		"templates": {
+			"common": {
+				"details": {
+					"description": {
+						"value": ""
+					},
+					"biography": {
+						"value": ""
+					},
+					"fatePoints": {
+						"current":"",
+						"refresh":""
+					}
+				},
+				"tracks":{},
+				"aspects":{},
+				"skills":{},
+				"stunts":{}
+			}
+		},
+		"ModularFate": {
+			"templates": ["common"],
+			"details": {
+			}
+		},
+		"Thing":{
+			"container": {
+				"locked":"false",
+				"security":"0",
+				"isContainer":"false",
+				"movable":true,
+				"extra":{}
+			}
+		}
+	},
+	"Item": {
+		"types": ["Extra"],
+		"templates": {
+			"baseItem": {
+				"description": {
+					"value": ""
+				}
+			}
+		},
+		"Extra": {
+			"templates": ["baseItem"],
+			"permissions": "",
+			"costs": "",
+			"refresh":"",
+			"stunts":{},
+			"aspects":{},
+			"skills":{},
+			"tracks":{},
+			"actions": {
+				"overcome": "",
+				"create": "",
+				"attack": "",
+				"defend": ""
+			},
+			"countSkills": false,
+			"contents":{}
+		}
+	}
+}

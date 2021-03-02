@@ -1,0 +1,118 @@
+<form class="editable" onsubmit="event.preventDefault();">
+<div style="max-height:75vh; overflow-y:auto">
+    <table style="border:none; background:none">
+    <tr>
+        <td colspan="2">
+            <hr><h3>{{localize 'ModularFate.WorldSkillsPresent'}}</h3><hr>
+        </td>
+    </tr>
+    {{#each present_skills}}
+    {{#if (eq this.extra_tag undefined)}}
+    <tr>
+        <td style="width:100px">
+            <input type="checkbox" class="skill_check_box" checked id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            {{this.name}}
+        </td>
+    </tr>
+    {{else}}{{/if}}
+    {{/each}}
+    <tr>
+            <td colspan="2">
+                <hr><h3>{{localize 'ModularFate.OrphanedSkills'}}</h3><hr>
+            </td>
+        </tr>
+        {{#each orphaned}}
+        {{#if (eq this.extra_tag undefined)}}
+        <tr>
+            <td style="width:100px">
+                <input type="checkbox" class="skill_check_box" checked id="{{this.name}}" name="{{this.name}}_present"}>
+            </td>
+            <td>
+                {{this.name}}
+            </td>
+        </tr>
+        {{else}}{{/if}}
+        {{/each}}
+        <tr>
+            <td colspan="2">
+                <hr><h3>{{localize 'ModularFate.AdHocSkills'}}</h3><hr>
+            </td>
+        </tr>
+    {{#each ad_hoc}}
+    {{#if (eq this.extra_tag undefined)}}
+    <tr>
+        <td style="width:100px">
+            <input type="checkbox" class="skill_check_box" checked id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            {{this.name}}
+        </td>
+    </tr>
+    {{else}}{{/if}}
+    {{/each}}
+    <tr>
+        <td colspan="2">
+            <hr><h3>{{localize 'ModularFate.WorldSkillsAbsent'}}</h3><hr>
+        </td>
+    </tr>
+    {{#each absent_skills}}
+    <tr>
+        <td>
+            <input type="checkbox" class="skill_check_box" id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            {{this.name}}
+        </td>
+    </tr>
+    {{/each}}
+    <tr>
+        <td colspan="2">
+            <hr><h3>{{localize 'ModularFate.NonPCSkills'}}<h3></h3><hr>
+        </td>
+    </tr>
+    {{#each non_pc}}
+    <tr>
+        <td>
+            <input type="checkbox" class="skill_check_box" id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            {{this.name}}
+        </td>
+    </tr>
+    {{/each}}
+    </table>
+</div>
+<table style="background:none; border:none">
+    <tr>
+        <td>
+            {{localize 'ModularFate.AdHocSkillToAdd'}}:
+        </td>
+        <td>
+            <input name="ad_hoc_input" id="ad_hoc_input" style="color:black; background: white; font-family:Arial; width:200px"><button style="width:30px; height:30px;"" type="button" id="add_ah_button" i icon class="fas fa-plus"></button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" id="select_all_skills_button">
+                {{localize 'ModularFate.CheckAllSkills'}}
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" id="deselect_all_skills_button">
+                {{localize 'ModularFate.UnCheckAllSkills'}}
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" id="add_remove_button">
+                {{localize 'ModularFate.AddRemoveSkills'}}
+            </button>
+        </td>
+    </tr>
+</table>
+</form>

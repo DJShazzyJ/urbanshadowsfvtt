@@ -1,0 +1,43 @@
+<form class="editable" onsubmit="event.preventDefault();" style="background-color:white; color:black">
+    <div id = "header">
+        Filter: <select id = "select_box" style="background-color: white; color:black; font-family:Montserrat">
+            <option selected disabled value="{{localize 'ModularFate.ChooseACategory'}}">{{localize 'ModularFate.ChooseACategory'}}</option>
+            {{#each tracks_by_category}}
+            <option>{{@key}}</option>
+            {{/each}}
+            </select>
+    <div name = "tracks_body" style="overflow-y:auto; width:400px; height:250px; border:none"><!--Begin body-->
+        <table style="background-color: white; border:none">
+        {{#each tracks_by_category}}
+            {{#each this}}
+            {{#if (eq this.extra_tag undefined)}}
+            <tr>
+                {{#if (eq ../../cat @../key)}}
+                <td title ="{{this.description}}">
+                    <input type ="checkbox" id="{{this.name}}"
+                        title="{{this.description}}" 
+                        {{checked this.present}}
+                        {{checked this.toCopy}}
+                            {{#if this.universal}}
+                            {{/if}}></input></td>
+                            <td title="{{localize 'ModularFate.RightClickForDetails'}}" name="nameField" id="{{this.name}}_nameField" style="font-family:Montserrat">{{this.name}}{{#if this.unique}}{{else}}{{#if (undefined this.parent)}}&nbsp&nbsp<input type="number" min="1" value="{{this.number}}" id="{{this.name}}_number" title="{{localize 'ModularFate.NumberOfCopies'}}" style="color:black; background-color:white; border:1px solid lightsteelblue; font-family:Montserrat; width:40px;">{{else}}{{/if}}{{/if}}</td>
+                            <td>
+                                <button type="button" name = "{{../../cat}}_{{this.name}}" id="move_up" i icon class="fas fa-sort-up" style="width:25px; height:25px; background-color: white; color:black"></button>
+                                <button type="button" name = "{{../../cat}}_{{this.name}}"id="move_down" i icon class="fas fa-sort-down" style="width:25px; height:25px; background-color: white; color:black"></button>
+                            </td>
+                {{/if}}
+                </tr>
+                {{else}}{{/if}}
+            {{/each}}
+        {{/each}}
+    </table>
+    </div><!--End body-->
+    <div id="buttons" style="width:400px">
+        <button type="button" id="save">{{localize 'ModularFate.AddRemoveTracks'}}</button>
+        {{#if GM}}<button type="button" id="ad_hoc">{{localize 'ModularFate.AddAdHocTrack'}}</button>{{/if}}
+    </div><!--End buttons div-->
+    </div><!--End of header DIV-->
+    <div>
+        {{select_box.value}}
+    </div>
+</form>

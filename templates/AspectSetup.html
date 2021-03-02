@@ -1,0 +1,32 @@
+<form onsubmit="event.preventDefault();">
+    <table style="width:auto" cellspacing ="4" cellpadding="4">
+        <tr>
+            <td>
+                {{localize 'ModularFate.Aspects'}}:
+            </td>
+            <td>
+                <select id="aspectListBox" size = "25" style="background: white; color: black; font-family:Arial; width: 150px; height: 250px">
+                    {{#each aspects}}
+                        <option>
+                            {{this.name}}
+                        </option>>
+                    {{/each}}
+                </select>
+            </td>
+            <td>
+                <button type="button" id="editAspect">{{localize 'ModularFate.Edit'}}</button><p></p>
+                <button type="button" id="deleteAspect">{{localize 'ModularFate.Delete'}}</button><p></p>
+                <button buttontype="button" id="copyAspect">{{localize 'ModularFate.Copy'}}</button><p></p>
+                <button buttontype="button" id="exportAspect">{{localize 'ModularFate.Export'}}</button>
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button type="button" id="addAspect">{{localize 'ModularFate.AddNewAspect'}}</button>
+                <button type="button" id="importAspects">{{localize 'ModularFate.ImportAspects'}}</button>
+                <button type="button" id="exportAspects">{{localize 'ModularFate.ExportAspects'}}</button>
+            </td>
+        </tr>
+    </table>
+</form>

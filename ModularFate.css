@@ -1,0 +1,355 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.otf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-LightItalic.otf");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-BoldItalic.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Black.otf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-BlackItalic.otf");
+  font-style: italic;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Fate Core";
+  src: url("fonts/Fate Core Font.ttf");
+}
+.fate.window-app .window-content h1,
+.fate.window-app .window-content h2,
+.fate.window-app .window-content h3 {
+  margin: 0;
+  border: none;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button;
+  }
+
+button {
+  border-radius: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border: 2px solid black;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#chat-log .message {
+  border: 2px solid black;
+  border-radius: 0;
+  background: #c8c8c8;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+#chat-log .message .message-header {
+  color: black;
+}
+#chat-log .message h2 {
+  border-bottom: 2px solid black;
+  font-weight: bold;
+  text-align: center;
+}
+#chat-log .message p {
+  font-size: 1.1em;
+}
+#chat-log .message .dice-roll .dice-formula,
+#chat-log .message .dice-roll .dice-total {
+  border: 1px solid black;
+  border-radius: 0;
+  box-shadow: none;
+}
+#chat-log .message .dice-tooltip .part-formula {
+  border-bottom: 1px solid black;
+}
+#chat-log .message .dice-tooltip .part-formula .part-total {
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 0;
+}
+
+.fu_controlled {
+  background-color:lightsteelblue !important;
+}
+
+.fu_uncontrolled {
+  background-color:lightgrey !important;
+}
+
+.fu_button:hover {
+  filter: drop-shadow(0px 0px 3px red) !important;
+  box-shadow:none !important;
+}
+
+.fu_button:focus {
+  filter: drop-shadow(0px 0px 3px red) !important;
+  box-shadow:none !important;
+}
+
+.mf_item {
+  background-color:white; 
+  margin:0px; 
+  font-size:x-large; 
+  padding-left:15px; 
+  padding-top:10px; 
+  padding-bottom:10px; 
+  padding-right:15px; 
+  float:right;
+}
+
+.mf_item:not(.active) {
+  box-shadow: inset 0px -6px 15px -6px grey;
+}
+
+.fu_toggle_off {
+  font-size:x-large; 
+  color:grey;
+  background-color:lightgray;
+  float:right;
+  padding-left:5px;
+  padding-right:5px;
+  padding-bottom:5px;
+}
+
+.fu_toggle_on {
+  
+  font-size:x-large; 
+  color:black;
+  background-color:lightgray;
+  float:right;
+  padding-left:5px;
+  padding-right:5px;
+  padding-bottom:5px;
+}
+
+.fu_toggle_off:hover {
+  text-shadow: 0 0 8px red;
+}
+
+.fu_toggle_on:hover {
+  text-shadow: 0 0 8px red;
+}
+
+.fu_item_1 {
+  width:60px;
+  text-align:center;
+  font-size:x-large; 
+  padding: 15px; 
+  float:left; 
+  color:grey;
+  background-color:lightgray;
+  box-shadow: inset 0px -6px 15px -6px black;
+  border-bottom: 1px solid black;
+}
+
+.fu_item_1.active {
+  color:black;
+  border: solid black; border-width: 1px 1px 0px 1px;
+  box-shadow:none;
+}
+
+.fu_item_2 {
+  width:60px;
+  font-size:x-large; 
+  text-align:center;
+  padding: 15px; 
+  float:left; 
+  background-color:lightgray;
+  color:grey;
+  box-shadow: inset 0px -6px 15px -6px black;
+  border-bottom: 1px solid black
+}
+
+.fu_item_2.active {
+  color:black;
+  border: solid black; border-width: 1px 1px 0px 1px;
+  box-shadow:none;
+}
+
+.fu_item_3 {
+  width:60px;
+  text-align:center;
+  font-size:x-large; 
+  padding: 15px; 
+  float:left; 
+  background-color:lightgray;
+  color:grey;
+  box-shadow: inset 0px -6px 15px -6px black;
+  border-bottom: 1px solid black
+}
+
+.fu_item_3.active {
+  color:black;
+  border: solid black; border-width: 1px 1px 0px 1px;
+  box-shadow:none;
+}
+
+.fu_item_4 {
+  text-align:center;
+  width:60px;
+  font-size:x-large; 
+  padding: 15px; 
+  float:left; 
+  background-color:lightgray;
+  color:grey;
+  box-shadow: inset 0px -6px 15px -6px black;
+  border-bottom: 1px solid black
+}
+
+.fu_item_4.active {
+  color:black;
+  border: solid black; border-width: 1px 1px 0px 1px;
+  box-shadow:none;
+}
+
+.fu_item_5 {
+  text-align:center;
+  width:60px;
+  font-size:x-large; 
+  padding: 15px; 
+  float:left; 
+  background-color:lightgray;
+  color:grey;
+  box-shadow: inset 0px -6px 15px -6px black;
+  border-bottom: 1px solid black
+}
+
+.fu_item_5.active {
+  color:black;
+  border: solid black; border-width: 1px 1px 0px 1px; 
+  box-shadow:none;
+}
+
+/* The container */
+.box {
+  display: flex-row;
+  float:left;
+  position: relative;
+  padding-left: 0px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid;
+  border-color:#2f3542;
+  border-width:3px;
+  background-color:white;
+}
+
+/* On mouse-over, add a grey background color */
+.box:hover input ~ .checkmark {
+  background-color: lightsteelblue;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  font-family:Montserrat;
+  content: "X";
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  font-weight:900;
+  font-size:20px;
+  display: none;
+  height: 20px;
+  width: 20px;
+  background-color:none;
+  transform:translate(-50%, -75%)
+    
+}
+
+/* Show the checkmark when checked */
+.box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.cs_box {
+  background-color:white !important;
+  font-family:Montserrat !important;
+  border-top:none !important;
+  border-radius:0 !important;
+  border-right:none !important;
+  border-left:none !important;
+  border-bottom:1px solid lightsteelblue !important
+}
+
+.cs_box:hover {
+  background-color: lightsteelblue !important;
+}
+
+.aspect_box {
+  font-size:small; 
+  min-width:100px !important;
+  max-width:75% !important; 
+  margin-top:5px !important; 
+  margin-bottom:5px !important; 
+  border-style:solid !important; 
+  height:25px !important; 
+  float:left !important; 
+  padding:5px !important; 
+  color:black !important; 
+  background-color :white !important; 
+  font-family:Montserrat !important; 
+  border:none !important; 
+  border-bottom: 1px solid lightsteelblue !important
+}
+
+.aspect_box:hover {
+  background-color: lightsteelblue !important;
+}
+
+.long_text {
+  min-height:50px !important; 
+  background-color:white !important;
+  font-family:Montserrat !important;
+  font-size:10pt
+}
+
+.long_text:hover {
+  background-color: lightsteelblue !important;
+}

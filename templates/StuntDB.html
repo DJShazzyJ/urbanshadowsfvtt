@@ -1,0 +1,47 @@
+<body>
+    <div style="width:1200px; max-height:50px; background-color:white; font-family:Montserrat; font-size:10pt; padding:0px; display:table">
+        <div style="display:table-row;background-color:#185CAB; color:white;">
+            <div name="sb_name" title="Sort by name" style="width:200px; border-right:1px solid lightsteelblue; font-weight:bold; float:left; padding:5px">
+                {{localize 'ModularFate.StuntName'}}
+            </div>
+            <div name="sb_skill" title="Sort by skill" style="width:100px; border-right:1px solid lightsteelblue; font-weight:bold; float:left ; padding:5px">
+                {{localize 'ModularFate.Skill'}}
+            </div>
+            <div name="sb_refresh" title="Sort by refresh cost" style="width:80px; border-right:1px solid lightsteelblue;  font-weight:bold; float:left ; padding:5px">
+                {{localize 'ModularFate.Refresh'}}
+            </div>
+            <div style="width:700px; border-right:1px solid lightsteelblue; font-weight:bold; float:left; padding:5px">
+                {{localize 'ModularFate.Description'}}
+            </div>
+            <div style="width:120px; font-weight:bold; float:left; padding:5px">
+                {{localize 'ModularFate.Actions'}}
+            </div>
+        </div>
+    </div>
+<div style="width:1200px; min-height:150px; max-height:850px; background-color:white; overflow-y:auto; font-family:Montserrat; font-size:10pt; padding:0px;">
+    <div style="background:white; display:table">
+        {{#each stunts}}
+        <div style="display:table-row">
+            <div style="border-right:1px solid lightsteelblue; border-bottom:1px solid lightsteelblue; width:200px; display:table-cell; padding:5px">
+                {{this.name}}
+            </div>
+            <div style="border-right:1px solid lightsteelblue; border-bottom:1px solid lightsteelblue; width:100px; display:table-cell; padding:5px">
+                {{this.linked_skill}}
+            </div>
+            <div style="border-right:1px solid lightsteelblue; border-bottom:1px solid lightsteelblue; width:80px; display:table-cell; padding:5px">
+                {{this.refresh_cost}}
+            </div>
+            <div style="border-right:1px solid lightsteelblue; border-bottom:1px solid lightsteelblue; width:700px; display:table-cell; padding:5px">
+                {{{this.description}}}
+            </div>
+            <div style="border-bottom:1px solid lightsteelblue; width:120px; display:table-cell; padding:5px">
+                {{#if ../actor.isOwner}}<button type="button" name="add_stunt" style="border:none; float:left; width:25px; height:25px; background-color:transparent" title="{{localize 'ModularFate.AddStuntToActor'}} {{../actor.name}}" i icon class = "fas fa-download fu_button" id="{{this.name}}_addStunt"></button>{{/if}}
+                <button type="button" name="export_stunt" style="border:none; float:left; width: 25px; height:25px; background-color:transparent;" title="{{localize 'ModularFate.ExportStunt'}}" i icon class = "fas fa-file-export fu_button" id="{{this.name}}_exportStunt"></button>
+                {{#if ../gm}}<button type="button" name="del_stunt" style="border:none; float:right; width:25px; height:25px; background-color:transparent;" title="{{localize 'ModularFate.DeleteStunt'}}" i icon class = "fu_button fas fa-trash" id="{{this.name}}_deleteStunt"></button>{{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>    
+</div>
+<div style="max-height:40px; padding:10px"><button type="button" id="export_stunts" style="height:30px; width:150px">{{localize 'ModularFate.ExportStunts'}}</button><button type="button" id="import_stunts" style="height:30px; width:150px">{{localize 'ModularFate.ImportStunts'}}</button></div>
+</body>
